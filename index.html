@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/11e8571af7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href=".\assets\css\style.css">
+
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="bg-dark py-2 text-white text-center">
+    <h1><span class="fas fa-globe-americas"></span> Weather Dashboard</h1>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="col-md-3 col-xl-2 pt-3">
+        <!-- search form -->
+        <form id="search-form" role="search" class="d-flex align-items-center mb-3">
+          <input type="search" class="form-control" id="search-input" placeholder="Houston">
+          <button type="submit" class="btn btn-primary ml-1"><span class="fas fa-search"></span></button>
+          </div>
+          <!-- <label class="form-label" for="username">Username</label>
+        <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+        <button type="submit" class="btn">GetUser</button> -->
+        </form>
+
+        <!-- search history -->
+        <div id="search-history" class="btn-group-vertical w-100 justify-content-start history-scrollable">
+
+        </div>
+      </div>
+
+      <!-- Main content, weather data -->
+      <main class="col-md-9 col-xl-10 pt-3" role="main">
+        <!-- Current weather -->
+        <div id="current-weather" class="p-3 border mb-3" style="display: none;">
+          <h2><strong id="current-city"></strong>&nbsp;<img id="current-icon" src="" alt="weather icon"></h2>
+          <p>Temperature: <span id="current-temp"></span>&deg; F</p>
+          <p>Humidity: <span id="current-humidity"></span>%</p>
+          <p>Wind Speed: <span id="current-wind"></span> MPH</p>
+          <p id="current-uv-element">UV Index: <span id="current-uv" class="px-2 py-1 rounded"></span></p>
+        </div>
+
+        <!-- 5 day forecast -->
+        <div id="future-weather" class="p-3 border" style="display: none;">
+          <h3>5-Day Forecast</h3>
+          <div class="card-deck">
+            <div id="forecast-day-1" class="card text-center bg-primary text-light p-2 mb-3" style="max-width: 10rem; min-width: 10rem;">
+              <h5></h5>
+              <img class="mx-auto p-2" src="">
+              <p>Temp: <span class="temp"></span>&deg; F</p>
+              <p>Humidity: <span class="humidity"></span>%</p>
+            </div>
+            <div id="forecast-day-2" class="card text-center bg-primary text-light p-2 mb-3" style="max-width: 10rem; min-width: 10rem;">
+              <h5></h5>
+              <img class="mx-auto p-2" src="">
+              <p>Temp: <span class="temp"></span>&deg; F</p>
+              <p>Humidity: <span class="humidity"></span>%</p>
+            </div>
+            <div id="forecast-day-3" class="card text-center bg-primary text-light p-2 mb-3" style="max-width: 10rem; min-width: 10rem;">
+              <h5></h5>
+              <img class="mx-auto p-2" src="">
+              <p>Temp: <span class="temp"></span>&deg; F</p>
+              <p>Humidity: <span class="humidity"></span>%</p>
+            </div>
+            <div id="forecast-day-4" class="card text-center bg-primary text-light p-2 mb-3" style="max-width: 10rem; min-width: 10rem;">
+              <h5></h5>
+              <img class="mx-auto p-2" src="">
+              <p>Temp: <span class="temp"></span>&deg; F</p>
+              <p>Humidity: <span class="humidity"></span>%</p>
+            </div>
+            <div id="forecast-day-5" class="card text-center bg-primary text-light p-2 mb-3" style="max-width: 10rem; min-width: 10rem;">
+              <h5></h5>
+              <img class="mx-auto p-2" src="">
+              <p>Temp: <span class="temp"></span>&deg; F</p>
+              <p>Humidity: <span class="humidity"></span>%</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src=".\assets\js\script.js"></script>
+</body>
+
+</html>
