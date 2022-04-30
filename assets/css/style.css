@@ -1,0 +1,6 @@
+.history-scrollable {
+    position: relative;
+    max-height: calc(100vh - 142px); 
+    overflow-x: hidden;
+    overflow-y: auto; 
+  }
